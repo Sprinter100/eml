@@ -22,7 +22,7 @@ gulp.task('inject', function() {
         .pipe(gulp.dest(__dirname))
 });
 
-gulp.task('inline', ['inject'], function() {
+gulp.task('inline', function() {
     var html = fs.readFileSync('index.html', 'utf8');
 
     var result = juice(html);
