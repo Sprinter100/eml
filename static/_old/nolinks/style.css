@@ -56,30 +56,9 @@ body {
     font-size: 18px;
 }
 
-.main__content-text a {
+.main__content-text a{
     color: #2a911f;
     word-wrap: break-word;
-    text-decoration: none;
-}
-
-.main__content-text p {
-    line-height: 1.44;
-}
-
-.main__button-wrap {
-    text-align: center;
-    padding: 30px 0;
-}
-
-.main__content-button {
-    display: inline-block;
-    width: 198px;
-    height: 44px;
-    line-height: 44px;
-    border-radius: 26px;
-    background-color: #e7f038;
-    font-size: 17px;
-    color: #414141;
 }
 
 .main__footer {

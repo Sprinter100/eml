@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body style="width: 100%; height: 100%; padding: 0; margin: 0;">
     <div class="wrap" style="background: #f6f5f3; padding: 0 2%;">
@@ -21,29 +20,15 @@
                     <div class="main__content-title" style="text-align: center; font-size: 24px; padding-bottom: 3%;">Здравствуйте, <% username %>!</div>
                     <div class="main__content-text" style="font-size: 18px;">
                         <p style="line-height: 1.44;">
-                            Вы настроили ежемесячный платёж на сайте <a href="http://www.sberbankvmeste.ru" style="color: #2a911f; word-wrap: break-word; text-decoration: none;">sberbankvmeste.ru</a><br>
+                            Вы зарегистрированы на сайте <a href="http://www.sberbankvmeste.ru" style="color: #2a911f; word-wrap: break-word; text-decoration: none;">sberbankvmeste.ru</a><br>
                         </p>
                         <p style="line-height: 1.44;">
-                            Мы очень рады, что Вы присоединились к тем, кто поддерживает благотворительные организации в России!
+                            Вы сделали запрос на восстановления пароля.<br>
+                            Вот ссылка, по которой можно придумать новый пароль:<br>
+                            <a href="<% rasswordResetLink %>" style="color: #2a911f; word-wrap: break-word; text-decoration: none;"><% rasswordResetLink %></a>
                         </p>
                         <p style="line-height: 1.44;">
-                            В этом месяце мы попытались списать <% amount %> с Вашего счёта, как Вы и настроили это когда-то. Но уже второй месяц подряд нам не удаётся это сделать.
-                        </p>
-                        <p style="line-height: 1.44;">
-                            Это молго произойти потому, что срок действия банковской карты истёк или на ней кончлись деньги. <br>
-                            Будем благодарны, если Вы проверите, что могло случиться с картой. <br>
-                            Пока мы останавливаем перечисления в благотворительные организации от вашего имени, но вы всегда можете
-                        </p>
-                        <div class="main__button-wrap" style="text-align: center; padding: 30px 0;">
-                            <a href="<% linkToRestoreFunding %>" style="color: #2a911f; word-wrap: break-word; text-decoration: none;">
-                                <span class="main__content-button" style="display: inline-block; width: 198px; height: 44px; line-height: 44px; border-radius: 26px; background-color: #e7f038; font-size: 17px; color: #414141;">Платить снова</span>
-                            </a>
-                        </div>
-                        <p style="line-height: 1.44;">
-                            Надеемся, Вы продолжите Вместе с нами делать благотворительность в России осознанной и прозрачной.
-                        </p>
-                        <p style="line-height: 1.44;">
-                            Спасибо, что Вы с нами!
+                            Мы хотим сделать подход к благотворительности осознанным, спасибо, что Вы с нами!
                         </p>
                         <p style="line-height: 1.44;">
                           С уважением,<br>

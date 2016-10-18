@@ -1,6 +1,8 @@
 var nodemailer = require('nodemailer');
 var fs = require('fs');
 
+var isMobile = process.argv[2] === 'mobile';
+
 var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -10,15 +12,22 @@ var transporter = nodemailer.createTransport({
     });
 
 var emails = [
-    'rivantsov@changers.team',
-    'riarzach47@gmail.com'
-].join(',')
+    'rivantsov@changers.team', //Yandex
+    'riarzach47@gmail.com', //Gmail
+    'khekfi@inbox.ru', //Mail.ru
+].join(',');
+
+var emailsMobile = [
+    'ruslan--47@yandex.ru', //Yandex
+    'specter978@gmail.com', //Gmail
+    'rus47@inbox.ru', //Mail.ru
+].join(',');
 
 var contents = fs.readFileSync('index.html', 'utf8');
 
 var mailOptions = {
     from: '"Fred Foo ?" <riarzach47@gmail.com>', // sender address
-    to: emails, // list of receivers
+    to: isMobile ? emailsMobile : emails, // list of receivers
     subject: 'Hello', // Subject line
     text: '', // plaintext body
     html: contents // html body
