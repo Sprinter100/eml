@@ -12,21 +12,23 @@ var transporter = nodemailer.createTransport({
     });
 
 var emails = [
-    'rivantsov@changers.team', //Yandex
-    'riarzach47@gmail.com', //Gmail
-    'khekfi@inbox.ru', //Mail.ru
+    ,'peter.palkin2016@yandex.ru' //Yandex
+    //,'riarzach47@gmail.com', //Gmail
 ].join(',');
 
 var emailsMobile = [
-    'ruslan--47@yandex.ru', //Yandex
-    'specter978@gmail.com', //Gmail
-    'rus47@inbox.ru', //Mail.ru
+    //'ruslan--47@yandex.ru', //Yandex
+    ,'specter978@gmail.com' //Gmail
+    //,'test153153153@gmail.com' //Gmail
+    //,'easy3rider3@gmail.com' //Gmail
+    //,'rus47@inbox.ru' //Mail.ru
 ].join(',');
 
-var contents = fs.readFileSync('index.html', 'utf8');
+//var contents = fs.readFileSync('newYearEmailNo.html', 'utf8');
+var contents = fs.readFileSync('newYearEmailYes.html', 'utf8');
 
 var mailOptions = {
-    from: '"Fred Foo ?" <riarzach47@gmail.com>', // sender address
+    from: '"Сбербано ?" <riarzach47@gmail.com>',
     to: isMobile ? emailsMobile : emails, // list of receivers
     subject: 'Hello', // Subject line
     text: '', // plaintext body
