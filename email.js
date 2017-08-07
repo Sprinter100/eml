@@ -17,22 +17,22 @@ var emails = [
     //'n.kravtsova@aventica.ru',
     //'specter978@gmail.com'
     //,'riarzach47@gmail.com', //Gmail
-    //,'test153153153@mail.ru'
-    //,'test153153153@yandex.ru'
+    ,'test153153153@mail.ru'
+    ,'test153153153@yandex.ru'
     ,'test153153153@gmail.com'
 ].join(',');
 
 var emailsMobile = [
     //'ruslan--47@yandex.ru', //Yandex
-    //,'specter978@gmail.com' //Gmail
     //,'n.kravtsova@aventica.ru'
     //,'test153153153@gmail.com' //Gmail
     //,'easy3rider3@gmail.com' //Gmail
+    //,'specter978@gmail.com' //Gmail
     //,'rus47@inbox.ru' //Mail.ru
 ].join(',');
 
 //var contents = fs.readFileSync('newYearEmailNo.html', 'utf8');
-var contents = fs.readFileSync('newYearEmailYes.html', 'utf8');
+var contents = fs.readFileSync('newYearEmailNo.html', 'utf8');
 
 var mailOptions = {
     from: '"Сбербано ?" <riarzach47@gmail.com>',
