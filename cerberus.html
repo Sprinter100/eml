@@ -114,29 +114,6 @@
         img.g-img + div {
             display: none !important;
         }
-
-        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-        /* Create one of these media queries for each additional viewport size you'd like to fix */
-
-        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
-        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-            u ~ div .email-container {
-                min-width: 320px !important;
-            }
-        }
-        /* iPhone 6, 6S, 7, 8, and X */
-        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-            u ~ div .email-container {
-                min-width: 375px !important;
-            }
-        }
-        /* iPhone 6+, 7+, and 8+ */
-        @media only screen and (min-device-width: 414px) {
-            u ~ div .email-container {
-                min-width: 414px !important;
-            }
-        }
-
     </style>
 
     <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
@@ -194,8 +171,81 @@
 	        }
 	    }
 
-        .test-class {
-            color: red !important;
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (max-device-width: 500px) {
+            .email-container {
+                width: 320px !important;
+            }
+            .logo-wrap {
+                padding-bottom: 32px !important;
+            }
+
+            .greeting-text {
+                font-size: 14px !important;
+            }
+
+            .assessment-table {}
+            .assessment-table__body {
+                display: block !important;
+            }
+            .assessment-table__row {
+                display: block !important;
+                padding: 24px !important;
+            }
+            .assessment-table__assessment-value-row {
+                border-bottom: solid 1px #d9d9d9 !important;
+            }
+            .assessment-table__cell {
+                display: block !important;
+                width: auto !important;
+                border: none !important;
+                padding: 0 !important;
+            }
+
+            .assessment-value {
+                font-size: 40px !important;
+                font-weight: bold !important;
+                text-align: left !important;
+                color: #eb564f !important;
+            }
+
+            .assessment-comment {
+
+            }
+
+            .assessment-table__list-cell {
+                display: table-cell !important;
+            }
+
+            .assessment-table__list-item {
+                width: 135px !important;
+            }
+
+            .assessment-table__list-item td {
+                height: 50px !important;
+            }
+
+            .assessment-table__footer-row {
+                padding: 16px 24px !important;
+            }
+
+            .assessment-table__department-text {
+                margin: 8px 0 0;
+            }
+        }
+
+        @media only screen and (max-device-width: 375px) {
+            .email-container {
+                width: 256px !important;
+            }
+
+            .assessment-table__list-item:nth-child(even) {
+                width: 80px !important;
+            }
+
+            .assessment-table__list-item:nth-child(odd) {
+                width: 120px !important;
+            }
         }
     </style>
     <!-- Progressive Enhancements : END -->
@@ -237,7 +287,7 @@
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
             Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 600px is a good width. Change with caution.
         -->
-        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+        <div style="max-width: 600px; margin: 0 auto;padding: 0 32px;" class="email-container">
             <!--[if mso]>
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
             <tr>
@@ -248,7 +298,7 @@
 	        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
 		        <!-- Email Header : BEGIN -->
 	            <tbody><tr>
-	                <td style="padding: 32px 0 56px;">
+	                <td class="logo-wrap" style="padding: 32px 0 56px;">
                         <img
                             src="https://via.placeholder.com/121x32"
                             width="121"
@@ -262,7 +312,9 @@
 
                 <tr>
                     <td>
-                        <p style="font-size: 16px;
+                        <p
+                            class="greeting-text"
+                            style="font-size: 16px;
                             font-weight: normal;
                             font-stretch: normal;
                             font-style: normal;
@@ -278,29 +330,29 @@
                 </tr>
 
                 <tr>
-                    <td style="padding: 24px 0;">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;background-color: #fff;border-radius: 6px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);table-layout: fixed;border: 1px solid #efefef">
-                            <tbody>
-                                <tr>
-                                    <td align="center" style="border-right: solid 1px #d9d9d9;border-bottom: solid 1px #d9d9d9;width: 161px;padding:30px 0;margin: 0">
-                                        <p style="font-size: 70px;font-weight: bold;color: #eb564f;text-align: center; line-height: 70px;margin:0">1.5</p>
+                    <td style="padding: 24px 0 18px;">
+                        <table class="assessment-table" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;background-color: #fff;border-radius: 6px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);table-layout: fixed;border: 1px solid #efefef">
+                            <tbody class="assessment-table__body">
+                                <tr class="assessment-table__row assessment-table__assessment-value-row">
+                                    <td class="assessment-table__cell" align="center" style="border-right: solid 1px #d9d9d9;border-bottom: solid 1px #d9d9d9;width: 161px;padding:30px 0;margin: 0">
+                                        <p class="assessment-value" style="font-size: 70px;font-weight: bold;color: #eb564f;text-align: center; line-height: 70px;margin:0">1.5</p>
                                     </td>
-                                    <td align="center" style="padding: 30px 32px;border-bottom: solid 1px #d9d9d9;">
-                                        <p style="font-size: 14px;
+                                    <td class="assessment-table__cell" align="center" style="padding: 30px 32px;border-bottom: solid 1px #d9d9d9;">
+                                        <p class="assessment-comment" style="font-size: 14px;
                                         line-height: 22px;
                                         color: #444a52;margin:0;text-align: left;">
                                             Сотрудник активно вовлечен в различные проекты, посвящает им много времени и сил
                                         </p>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td colspan="2" style="padding: 20px 34px">
+                                <tr class="assessment-table__row">
+                                    <td class="assessment-table__cell assessment-table__list-cell" colspan="2" style="padding: 20px 34px">
                                         <!--[if mso]>
                                         <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                         <td style="width: 150px">
                                         <![endif]-->
-                                        <table style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
+                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
                                             <tr>
                                                 <td style="height: 56px">
                                                     <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
@@ -314,7 +366,7 @@
                                         </td>
                                         <td style="width: 150px">
                                         <![endif]-->
-                                        <table style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
+                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
                                             <tr>
                                                 <td style="height: 56px">
                                                     <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
@@ -328,7 +380,7 @@
                                         </td>
                                         <td style="width: 150px">
                                         <![endif]-->
-                                        <table style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
+                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
                                             <tr>
                                                 <td style="height: 56px">
                                                     <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
@@ -344,7 +396,7 @@
                                         <tr>
                                         <td style="width: 150px">
                                         <![endif]-->
-                                        <table style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
+                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
                                             <tr>
                                                 <td style="height: 56px">
                                                     <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
@@ -357,7 +409,7 @@
                                         </td>
                                         <td style="width: 150px">
                                         <![endif]-->
-                                        <table style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
+                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
                                             <tr>
                                                 <td style="height: 56px">
                                                     <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
@@ -371,7 +423,7 @@
                                         </td>
                                         <td style="width: 150px">
                                         <![endif]-->
-                                        <table style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
+                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="150px">
                                             <tr>
                                                 <td style="height: 56px">
                                                     <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
@@ -389,15 +441,15 @@
 
                                     </td>
                                 </tr>
-                                <tr style="background-color: #f9f9f9;">
-                                    <td align="center" style="padding: 20px 0 20px 32px">
+                                <tr class="assessment-table__row assessment-table__footer-row" style="background-color: #f9f9f9;">
+                                    <td class="assessment-table__cell" align="center" style="padding: 20px 0 20px 32px">
                                         <p style="font-size: 14px;
                                         line-height: 22px;
                                         color: #9da4aa;margin:0;
                                         text-align: left;">20 января 2020</p>
                                     </td>
-                                    <td align="center" style="padding: 20px 32px 20px 0">
-                                        <p style="font-size: 14px;
+                                    <td class="assessment-table__cell" align="center" style="padding: 20px 32px 20px 0">
+                                        <p class="assessment-table__department-text"style="font-size: 14px;
                                         line-height: 22px;
                                         color: #444a52;text-align: left;">
                                             Департамент по информационным технологиям
