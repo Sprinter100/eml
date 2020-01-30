@@ -52,6 +52,12 @@
             -webkit-text-size-adjust: 100%;
         }
 
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
         /* What it does: Centers email on Android 4.4 */
         div[style*="margin: 16px 0"] {
             margin: 0 !important;
@@ -171,7 +177,7 @@
 	        }
 	    }
 
-        /* iPhone 6+, 7+, and 8+ */
+        /* iPhone 6+, 7+, and 8+
         @media only screen and (max-device-width: 555px) {
             .email-container {
                 width: 384px !important;
@@ -246,7 +252,7 @@
             .assessment-table__list-item:nth-child(odd) {
                 width: 120px !important;
             }
-        }
+        } */
     </style>
     <!-- Progressive Enhancements : END -->
 
@@ -330,134 +336,201 @@
                 </tr>
 
                 <tr>
-                    <td style="padding: 24px 0 18px;">
-                        <table class="assessment-table" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;background-color: #fff;border-radius: 6px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);table-layout: fixed;border: 1px solid #efefef">
-                            <tbody class="assessment-table__body">
-                                <tr class="assessment-table__row assessment-table__assessment-value-row">
-                                    <td class="assessment-table__cell" align="center" style="border-right: solid 1px #d9d9d9;border-bottom: solid 1px #d9d9d9;width: 161px;padding:30px 0;margin: 0">
-                                        <p class="assessment-value" style="font-size: 70px;font-weight: bold;color: #eb564f;text-align: center; line-height: 70px;margin:0">1.5</p>
+                    <td colspan="3" style="padding: 24px 0 18px;">
+                        <div style="background-color: #fff;border-radius: 6px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);">
+                            <!--[if mso]>
+                                <table class="assessment-table" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;background-color: #fff;border-radius: 6px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);table-layout: fixed;border: 1px solid #efefef">
+                                <tbody class="assessment-table__body">
+                            <![endif]-->
+                                <div style="width: 100%">
+                                    <div>
+                                    <!--[if mso]>
+                                        <tr class="assessment-table__row assessment-table__assessment-value-row">
+                                            <td class="assessment-table__cell" align="center" style="border-right: solid 1px #d9d9d9;border-bottom: solid 1px #d9d9d9;width: 161px;padding:30px 0;margin: 0">
+                                    <![endif]-->
+                                            <p
+                                            class="assessment-value" style="font-size: 70px;font-weight: bold;color: #eb564f;text-align: center; line-height: 70px;margin:0; display: inline-block; padding: 30px;
+                                            vertical-align: middle;
+                                            border-right: solid 1px #d9d9d9;
+                                            ">1.5</p>
+                                    <!--[if mso]>
                                     </td>
                                     <td class="assessment-table__cell" align="center" style="padding: 30px 32px;border-bottom: solid 1px #d9d9d9;">
-                                        <p class="assessment-comment" style="font-size: 14px;
-                                        line-height: 22px;
-                                        color: #444a52;margin:0;text-align: left;">
-                                            Сотрудник активно вовлечен в различные проекты, посвящает им много времени и сил
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr class="assessment-table__row">
-                                    <td class="assessment-table__cell assessment-table__list-cell" colspan="2" style="padding: 20px 34px">
-                                        <!--[if mso]>
-                                        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                        <tr>
-                                        <td style="width: 150px">
-                                        <![endif]-->
-                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
-                                            <tr>
-                                                <td style="height: 56px">
-                                                    <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
-                                                        Уважительное<br />
-                                                        отношение
-                                                    </p>
+                                    <![endif]-->
+                                            <p class="assessment-comment" style="font-size: 14px;
+                                            line-height: 22px;
+                                            color: #444a52;margin:0;text-align: left;
+                                            display: inline-block;
+                                            max-width: 365px;
+                                            width: 100%;
+                                            padding: 30px;
+                                            min-height: 130px;
+                                            box-sizing: border-box;
+                                            vertical-align: middle;
+                                            ">
+                                                Сотрудник активно вовлечен в различные проекты, посвящает им много времени и сил
+                                            </p>
+                                            <!--[if mso]>
                                                 </td>
-                                            </tr>
-                                        </table>
-                                        <!--[if mso]>
-                                        </td>
-                                        <td style="width: 150px">
-                                        <![endif]-->
-                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
-                                            <tr>
-                                                <td style="height: 56px">
-                                                    <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
-                                                        Качество<br />
-                                                        работы
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <!--[if mso]>
-                                        </td>
-                                        <td style="width: 150px">
-                                        <![endif]-->
-                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
-                                            <tr>
-                                                <td style="height: 56px">
-                                                    <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
-                                                        Результат<br />
-                                                        работы
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <!--[if mso]>
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                        <td style="width: 150px">
-                                        <![endif]-->
-                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
-                                            <tr>
-                                                <td style="height: 56px">
-                                                    <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
-                                                        Скорость
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <!--[if mso]>
-                                        </td>
-                                        <td style="width: 150px">
-                                        <![endif]-->
-                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
-                                            <tr>
-                                                <td style="height: 56px">
-                                                    <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
-                                                        Надёжность<br />
-                                                        информации
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <!--[if mso]>
-                                        </td>
-                                        <td style="width: 150px">
-                                        <![endif]-->
-                                        <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
-                                            <tr>
-                                                <td style="height: 56px">
-                                                    <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
-                                                        Командная<br />
-                                                        работа
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <!--[if mso]>
-                                        </td>
-                                        </tr>
-                                        </table>
-                                        <![endif]-->
+                                                </tr>
+                                            <![endif]-->
+                                    </div>
 
-                                    </td>
-                                </tr>
-                                <tr class="assessment-table__row assessment-table__footer-row" style="background-color: #f9f9f9;">
-                                    <td class="assessment-table__cell" align="center" style="padding: 20px 0 20px 32px">
-                                        <p style="font-size: 14px;
-                                        line-height: 22px;
-                                        color: #9da4aa;margin:0;
-                                        text-align: left;">20 января 2020</p>
-                                    </td>
-                                    <td class="assessment-table__cell" align="center" style="padding: 20px 32px 20px 0">
-                                        <p class="assessment-table__department-text"style="font-size: 14px;
-                                        line-height: 22px;
-                                        color: #444a52;text-align: left;">
-                                            Департамент по информационным технологиям
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+
+
+
+
+
+
+
+
+                                    <!--[if mso]>
+                                        <tr class="assessment-table__row">
+                                        <td class="assessment-table__cell assessment-table__list-cell" colspan="2" style="padding: 20px 34px">
+                                    <![endif]-->
+                                        <div class="clearfix">
+                                            <!--[if mso]>
+                                            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                            <td style="width: 150px">
+                                            <![endif]-->
+                                            <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
+                                                <tr>
+                                                    <td style="height: 56px">
+                                                        <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
+                                                            Уважительное<br />
+                                                            отношение
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            <td style="width: 150px">
+                                            <![endif]-->
+                                            <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
+                                                <tr>
+                                                    <td style="height: 56px">
+                                                        <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
+                                                            Качество<br />
+                                                            работы
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            <td style="width: 150px">
+                                            <![endif]-->
+                                            <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
+                                                <tr>
+                                                    <td style="height: 56px">
+                                                        <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
+                                                            Результат<br />
+                                                            работы
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td style="width: 150px">
+                                            <![endif]-->
+                                            <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
+                                                <tr>
+                                                    <td style="height: 56px">
+                                                        <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
+                                                            Скорость
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            <td style="width: 150px">
+                                            <![endif]-->
+                                            <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
+                                                <tr>
+                                                    <td style="height: 56px">
+                                                        <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
+                                                            Надёжность<br />
+                                                            информации
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            <td style="width: 150px">
+                                            <![endif]-->
+                                            <table class="assessment-table__list-item" style="float: left" cellspacing="0" cellpadding="0" border="0" width="140px">
+                                                <tr>
+                                                    <td style="height: 56px">
+                                                        <p style="font-size: 14px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 18px;letter-spacing: normal;color: #eb564f;margin: 0">
+                                                            Командная<br />
+                                                            работа
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            </tr>
+                                            </table>
+                                            <![endif]-->
+                                        </div>
+                                    <!--[if mso]>
+                                        </td>
+                                        </tr>
+                                    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div>
+                                        <!--[if mso]>
+                                                    <tr class="assessment-table__row assessment-table__footer-row" style="background-color: #f9f9f9;">
+                                                    <td class="assessment-table__cell" align="center" style="padding: 20px 0 20px 32px">
+                                                <![endif]-->
+                                                <p style="font-size: 14px;
+                                                line-height: 22px;
+                                                color: #9da4aa;margin:0;
+                                                text-align: left;">20 января 2020</p>
+                                        <!--[if mso]>
+                                            </td>
+                                            <td class="assessment-table__cell" align="center" style="padding: 20px 32px 20px 0">
+                                        <![endif]-->
+                                                <p class="assessment-table__department-text"style="font-size: 14px;
+                                                line-height: 22px;
+                                                color: #444a52;text-align: left;">
+                                                    Департамент по информационным технологиям
+                                                </p>
+
+                                        <!--[if mso]>
+                                            </td>
+                                            </tr>
+                                        <![endif]-->
+                                    </div>
+                                </div>
+                            <!--[if mso]>
+                                </tbody>
+                                </table>
+                            <![endif]-->
+
+                        </div>
                     </td>
                 </tr>
 

@@ -18,12 +18,12 @@ var transporter = nodemailer.createTransport({
 var emails = [
     //'pavel.kozlov.msu@gmail.com',
     //'n.kravtsova@aventica.ru',
-    //'specter978@gmail.com'
     // ,'riarzach47@gmail.com', //Gmail
     // ,'test153153153@mail.ru'
     // ,'test153153153@yandex.ru'
     // ,'test153153153@gmail.com'
     'riarzach471@yandex.ru' //Yandex
+    // 'specter978@gmail.com'
     // ,'rus47@inbox.ru' //Mail.ru
     // ,'ruslan--47@yandex.ru', //Yandex
     // ,'specter978@gmail.com' //Gmail
