@@ -23,10 +23,10 @@ var emails = [
     // ,'test153153153@yandex.ru'
     // ,'test153153153@gmail.com'
     // ,'riarzach472@yandex.ru' //Yandex
+    // ,'rus47@inbox.ru' //Mail.ru
     // ,'specter978@gmail.com'
-    ,'rus47@inbox.ru' //Mail.ru
     // ,'ruslan--47@yandex.ru', //Yandex
-    // ,'specter978@gmail.com' //Gmail
+    ,'specter978@gmail.com' //Gmail
     // ,'yoipadmsk@icloud.com'
     // ,'Arzach47@outlook.com'
 ].join(',');
