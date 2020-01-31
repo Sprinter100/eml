@@ -22,9 +22,9 @@ var emails = [
     // ,'test153153153@mail.ru'
     // ,'test153153153@yandex.ru'
     // ,'test153153153@gmail.com'
-    'riarzach471@yandex.ru' //Yandex
-    // 'specter978@gmail.com'
-    // ,'rus47@inbox.ru' //Mail.ru
+    // ,'riarzach472@yandex.ru' //Yandex
+    // ,'specter978@gmail.com'
+    ,'rus47@inbox.ru' //Mail.ru
     // ,'ruslan--47@yandex.ru', //Yandex
     // ,'specter978@gmail.com' //Gmail
     // ,'yoipadmsk@icloud.com'
